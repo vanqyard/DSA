@@ -9,6 +9,9 @@ CREATE TABLE error_log (
 
 );
 /
+
+
+
 ------------------------------------------------------------------------
 --- MESSAGE ERRORS DICTIONARY
 ------------------------------------------------------------------------
@@ -18,6 +21,7 @@ CREATE TABLE msg_dict (
 
 );
 /
+
 
 
 ------------------------------------------------------------------------
@@ -91,3 +95,6 @@ CREATE OR REPLACE TYPE KARTOTEKA_TYP UNDER ABSTRACT (
 
 ) NOT INSTANTIABLE NOT FINAL;
 /
+
+
+
