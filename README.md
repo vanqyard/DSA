@@ -13,22 +13,22 @@ Wyróżniamy 2 rodzaje tabel różniące się wersjonowaniem danych historycznyc
 
 Zestaw kolumn technicznych: 
 - migawka: 
-	T_DATESTAMP DATE (data ładowania); 
+	- T_DATESTAMP DATE (data ładowania); 
 
 - kartoteka: 
-	T_STARTDATE DATE (początek obowiązywania wersji), 
-	T_ENDDATE DATE (koniec obowiązywania wersji), 
-	T_STATUS NUMBER(1) (2-rekord usunięty, 0-rekord dostępny). 
+	- T_STARTDATE DATE (początek obowiązywania wersji), 
+	- T_ENDDATE DATE (koniec obowiązywania wersji), 
+	- T_STATUS NUMBER(1) (2-rekord usunięty, 0-rekord dostępny). 
 
 Na tabelach utrzymywane są klucze główne odpowiadające kluczowi biznesowemu tabeli źródłowej plus kolumna techniczna wersjonowania (T_DATESTAMP – migawka, T_STARTDATE - kartoteka).
 
 Obecnie planowane jest ładowanie do DSA tabel ze schematu SH:
 
-Migawki:
+* Migawki:
 	- PROMOTIONS
 	- SALES
 
-Kartoteki:
+* Kartoteki:
 	- COUNTRIES
 	- CHANNELS
 	- CUSTOMERS
