@@ -1,6 +1,4 @@
-# Skrpyt SQL pozwalający na utworzenie hurtowni danych z wersjonowaniem SCD1 i SCD2
-
-# Zadanie: Zaprojektuj i zaimplementuj moduł ładowania danych systemu DSA.
+## Zaprojektuj i zaimplementuj moduł ładowania danych systemu DSA.
 
 System DSA:
 Wstępna warstwa hurtowni danych, której głównym modułem jest repozytorium danych utworzone na bazie danych Oracle w schemacie XX_SCHOOL.
@@ -36,7 +34,7 @@ Obecnie planowane jest ładowanie do DSA tabel ze schematu SH:
 
 W ramach zadania przygotuj i wykonaj skrypty tworzące ww. tabele w bazie. Tabele te  powinny mieć nazwy składające się ze systemu źródłowego (schematu) i nazwy tabeli źródłowej, np. SH_SALES.
 
-Moduł ładujący DSA:
+## Moduł ładujący DSA
 
 Moduł ładujący powinien posiadać następujące cechy:
 
