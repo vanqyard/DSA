@@ -40,6 +40,36 @@ CREATE OR REPLACE TYPE ABSTRACT AS OBJECT (
 
 
 
+
+----- informacja, ostrzeżenie, błąd
+----- INFO, WARN, ERR
+
+
+-- THE PROCEDURE write_log performs 
+-- COMMIT IN AUTONOMOUS_TRANSACTION
+CREATE OR REPLACE PROCEDURE write_log (		
+		log_code	IN INTEGER
+	,	log_mesg	IN VARCHAR2) IS
+--
+PRAGMA AUTONOMOUS_TRANSACTION;
+--
+BEGIN																-- PT suspends
+	INSERT INTO error_log VALUES ( 		-- CT begins
+		log_code,
+		log_mesg,
+		SYSDATE,
+		USER	
+	);
+	COMMIT;														-- CT ends
+EXCEPTION
+		WHEN OTHERS THEN
+			ROLLBACK;
+END write_log;											-- PT resumes
+
+
+
+
+
 ------------------------------------------------------------------------
 --- DEFINITION - TYP ABSTRAKCYJNY (ABSTRACT TYPE)
 ------------------------------------------------------------------------
