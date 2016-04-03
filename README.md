@@ -8,32 +8,31 @@ Wstępna warstwa hurtowni danych, której głównym modułem jest repozytorium d
 W repozytorium DSA utrzymywane są dane bieżące i historyczne (wersjonowane dziennie) w postaci tabel płaskich o strukturze odpowiadającej 1:1 tabelom źródłowym, plus kolumny techniczne. 
 
 Wyróżniamy 2 rodzaje tabel różniące się wersjonowaniem danych historycznych: 
-	
-	- migawki (dla każdej daty ładowania pełny zestaw danych)
-	- kartoteki (dodawane tylko dane zmienione, wersjonowanie SCD2, identyfikacja że zmiana dotyczy danego rekordu na podstawie PK). 
+- migawki (dla każdej daty ładowania pełny zestaw danych)
+- kartoteki (dodawane tylko dane zmienione, wersjonowanie SCD2, identyfikacja że zmiana dotyczy danego rekordu na podstawie PK). 
 
 Zestaw kolumn technicznych: 
-	- migawka: 
-			T_DATESTAMP DATE (data ładowania); 
+- migawka: 
+	T_DATESTAMP DATE (data ładowania); 
 
-	- kartoteka: 
-			T_STARTDATE DATE (początek obowiązywania wersji), 
-			T_ENDDATE DATE (koniec obowiązywania wersji), 
-			T_STATUS NUMBER(1) (2-rekord usunięty, 0-rekord dostępny). 
+- kartoteka: 
+	T_STARTDATE DATE (początek obowiązywania wersji), 
+	T_ENDDATE DATE (koniec obowiązywania wersji), 
+	T_STATUS NUMBER(1) (2-rekord usunięty, 0-rekord dostępny). 
 
 Na tabelach utrzymywane są klucze główne odpowiadające kluczowi biznesowemu tabeli źródłowej plus kolumna techniczna wersjonowania (T_DATESTAMP – migawka, T_STARTDATE - kartoteka).
 
 Obecnie planowane jest ładowanie do DSA tabel ze schematu SH:
 
-	Migawki:
-			PROMOTIONS
-			SALES
+Migawki:
+	- PROMOTIONS
+	- SALES
 
-	Kartoteki:
-			COUNTRIES
-			CHANNELS
-			CUSTOMERS
-			PRODUCTS
+Kartoteki:
+	- COUNTRIES
+	- CHANNELS
+	- CUSTOMERS
+	- PRODUCTS
 
 W ramach zadania przygotuj i wykonaj skrypty tworzące ww. tabele w bazie. Tabele te  powinny mieć nazwy składające się ze systemu źródłowego (schematu) i nazwy tabeli źródłowej, np. SH_SALES.
 
