@@ -49,8 +49,8 @@ Moduł ładujący powinien posiadać następujące cechy:
 		- tabeli słownikowej komunikatów zawierającej listę wykorzystywanych komunikatów z identyfikatorem. Komunikaty powinny być trzech typów (informacja, ostrzeżenie, błąd) identyfikowanymi np. przez zakres identyfikatorów (np. 3000-3999 - błędy). Uwaga – część komunikatów powinna zawierać elementy zmienne, np. liczba załadowanych wierszy.
 
 5. Obsługa błędów – moduł powinien obsługiwać ewentualne błędy z wykorzystaniem mechanizmu logowania (zapisanie stosownego komunikatu w logu). Błędy danych (w zależności od parametryzacji dla poszczególnych procesów) powinny być obsługiwane poprzez:
-		- odrzucenie wierszy błędnych z odpowiednim komunikatem i załadowanie wszystkich poprawnych
-		- pojawienie się krytycznego błędu ładowania – nie załadowanie żadnego wiersza.
+	* odrzucenie wierszy błędnych z odpowiednim komunikatem i załadowanie wszystkich poprawnych
+	* pojawienie się krytycznego błędu ładowania – nie załadowanie żadnego wiersza.
 
 6. Łatwość utrzymania – moduł powinien być napisany starannie z zastosowaniem spójnego stylu programowania, formatowania i komentarzami tak żeby umożliwić łatwość utrzymania, a wypracowane jednostki mogły stać się wzorcami do stosowania przy nowych projektach.
 
