@@ -74,18 +74,7 @@ END create_snapshot_table;
 
 
 
-CREATE OR REPLACE PROCEDURE create_hash_table(v_source_table VARCHAR2)
-AS
-	
-BEGIN
-	
-	--- CREATE TABLE hash_products (hash_value	NUMBER(20));
-	EXECUTE IMMEDIATE 
-		'CREATE TABLE ' || 'hash_' || v_source_table || ' (' || 
-						CHR(10) || 'hash_value	NUMBER(20)'  || 
-						CHR(10) || ')' ;
-	
-END create_hash_table;
+
 
 
 

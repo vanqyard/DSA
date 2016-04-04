@@ -85,3 +85,24 @@ BEGIN
   create_snapshot('PRODUCTS', 'SH_PROCUCTS');
 
 END;
+
+
+SET SERVEROUTPUT ON
+DECLARE 
+  ret_val VARCHAR2(1000);
+BEGIN
+  ret_val := check_table_equity('GRADE', 'COURSE');
+  DBMS_OUTPUT.PUT_LINE(ret_val);
+END;
+
+
+
+
+
+
+
+
+
+
+
+
